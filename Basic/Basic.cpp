@@ -34,6 +34,7 @@ int main() {
             processLine(input, program, state);
         } catch (ErrorException &ex) {
             std::cout << ex.getMessage() << std::endl;
+            break;
         }
     }
     return 0;
@@ -56,7 +57,127 @@ void processLine(std::string line, Program &program, EvalState &state) {
     scanner.ignoreWhitespace();
     scanner.scanNumbers();
     scanner.setInput(line);
-
-    //todo
+    std::string tmp = scanner.nextToken();
+    if (scanner.getTokenType(tmp) == NUMBER)
+    {
+        int linenumber = std::stoi(tmp); ///Have some risk!!
+        std::string line;
+        while (scanner.hasMoreTokens())
+        {
+            line += scanner.nextToken() + ' ';
+        }
+        program.addSourceLine(linenumber, line);
+        return;
+    } else {
+        if (tmp == "LET")
+        {
+            if (!scanner.hasMoreTokens()) {
+                error("SYNTAX ERROR");
+            } else {
+                std::string variable = scanner.nextToken();
+                if (scanner.nextToken()[0] == '=') {
+                    if (scanner.hasMoreTokens()) {
+                        std::string ex;
+                        while (scanner.hasMoreTokens()) {
+                            ex += scanner.nextToken() + ' ';
+                        }
+                        TokenScanner expp;
+                        expp.ignoreWhitespace();
+                        expp.scanNumbers();
+                        expp.setInput(ex);
+                        Expression *exp = parseExp(expp);
+                        Statement *sta = new LetStatement(variable, exp);
+                        sta->execute(state, program);
+                        return;
+                    } else {
+                        error("SYNTAX ERROR");
+                    }
+                } else {
+                    error("SYNTAX ERROR");
+                }
+            }
+            return;
+        }
+        if (tmp == "PRINT")
+        {
+            if (!scanner.hasMoreTokens()) {
+                error("SYNTAX ERROR");
+            }
+            else {
+                std::string ex;
+                while (scanner.hasMoreTokens()) {
+                    ex += scanner.nextToken() + ' ';
+                }
+                TokenScanner expp;
+                expp.ignoreWhitespace();
+                expp.scanNumbers();
+                expp.setInput(ex);
+                Expression *exp = parseExp(expp);
+                Statement *sta = new PrintStatement(exp);
+                sta->execute(state, program);
+                return;
+            }
+            return;
+        }
+        if (tmp == "INPUT")
+        {
+            if (!scanner.hasMoreTokens()) {
+                error("SYNTAX ERROR");
+            }
+            else {
+                std::string variable = scanner.nextToken();
+                if (scanner.hasMoreTokens()) {
+                    error("SYNTAX ERROR");
+                }
+                Statement *sta = new InputStatement(variable);
+                sta->execute(state, program);
+                return;
+            }
+            return;
+        }
+        if (tmp == "END")
+        {
+            Statement *sta = new EndStatement();
+            sta->execute(state, program);
+            return;
+        }
+        if (tmp == "REM")
+        {
+            Statement *sta = new REMStatement();
+            sta->execute(state, program);
+            return;
+        }
+        if (tmp == "RUN")
+        {
+            Statement *sta = new RunStatement();
+            sta->execute(state, program);
+            return;
+        }
+        if (tmp == "LIST")
+        {
+            Statement *sta = new ListStatement();
+            sta->execute(state, program);
+            return;
+        }
+        if (tmp == "CLEAR")
+        {
+            Statement *sta = new ClearStatement();
+            sta->execute(state, program);
+            return;
+        }
+        if (tmp == "QUIT")
+        {
+            Statement *sta = new QuitStatement();
+            sta->execute(state, program);
+            return;
+        }
+        if (tmp == "HELP")
+        {
+            Statement *sta = new HelpStatement();
+            sta->execute(state, program);
+            return;
+        }
+        error("SYNTAX ERROR");
+    }
 }
 

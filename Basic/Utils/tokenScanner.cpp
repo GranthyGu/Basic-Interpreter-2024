@@ -172,8 +172,7 @@ bool TokenScanner::isWordCharacter(char ch) const {
 void TokenScanner::verifyToken(std::string expected) {
     std::string token = nextToken();
     if (token != expected) {
-        std::string msg = "Found \"" + token + "\"" +
-                          " when expecting \"" + expected + "\"";
+        std::string msg = "Found \"" + token + "\"" + " when expecting \"" + expected + "\"";
         error(msg);
     }
 };

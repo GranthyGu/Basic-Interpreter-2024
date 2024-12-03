@@ -6,6 +6,7 @@
 
 #include <cctype>
 #include <iomanip>
+#include <sstream>
 #include <iostream>
 #include "error.hpp"
 #include "strlib.hpp"

@@ -11,9 +11,9 @@
 #include <string>
 #include <vector>
 #include <set>
+#include <map>
 #include <unordered_map>
 #include "statement.hpp"
-
 
 class Statement;
 
@@ -147,6 +147,7 @@ private:
 
     // Fill this in with whatever types and instance variables you need
     //todo
+    std::map <int, std::pair<Statement*, std::string>> program;
 };
 
 #endif
