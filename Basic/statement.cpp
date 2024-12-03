@@ -27,6 +27,11 @@ LetStatement::~LetStatement() {
     delete exp;
 }
 void LetStatement::execute(EvalState &state, Program &pro) {
+    if (var == "LET")
+    {
+        std::cout << "SYNTAX ERROR" << std::endl;
+        return;
+    }
     int value = exp->eval(state);
     state.setValue(var, value);
     return;
@@ -92,9 +97,7 @@ void InputStatement::execute(EvalState &state, Program &pro) {
 }
 
 EndStatement::EndStatement() {}
-void EndStatement::execute(EvalState &state, Program &pro) {
-    exit(0);
-}
+void EndStatement::execute(EvalState &state, Program &pro) {}
 
 GotoStatement::GotoStatement(int line) : linetarget(line) {}
 void GotoStatement::execute(EvalState &state, Program &pro) {
@@ -176,8 +179,7 @@ void RunStatement::execute(EvalState &state, Program &pro) {
             continue;
         }
         if (pro.getSourceLine(cur_line_number)[0] == 'E') {
-            sta->execute(state, pro);
-            continue;
+            break;
         }
         sta->execute(state, pro);
         cur_line_number = pro.getNextLineNumber(cur_line_number);

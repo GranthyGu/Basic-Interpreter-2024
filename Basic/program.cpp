@@ -39,10 +39,6 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                 error("SYNTAX ERROR");
             } else {
                 std::string variable = scanner.nextToken();
-                if (variable == "LET")
-                {
-                    error("SYNTAX ERROR");
-                }
                 if (scanner.nextToken()[0] == '=') {
                     if (scanner.hasMoreTokens()) {
                         std::string ex;
