@@ -35,7 +35,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
     if (scanner.hasMoreTokens()) {
         std::string token = scanner.nextToken();
         if (token == "REM") {
-            Statement *sta = nullptr;
+            Statement *sta = new REMStatement();
             program[lineNumber] = {sta, line};
             return;
         }
@@ -197,6 +197,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         if (program.find(lineNumber) == program.end()) {
             return;
         } else {
+            delete program[lineNumber].first;
             program.erase(lineNumber);
             return;
         }
