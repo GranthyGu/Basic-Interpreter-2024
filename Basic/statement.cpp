@@ -42,8 +42,16 @@ PrintStatement::~PrintStatement() {
     delete exp;
 }
 void PrintStatement::execute(EvalState &state, Program &pro) {
-    int value = exp->eval(state);
-    std::cout << value << std::endl;
+    try
+    {
+        int value = exp->eval(state);
+        std::cout << value << std::endl;
+    }
+    catch(std::exception& e)
+    {
+        delete exp;
+        throw;
+    }
     return;
 }
 
