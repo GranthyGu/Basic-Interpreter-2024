@@ -144,7 +144,7 @@ void RunStatement::execute(EvalState &state, Program &pro) {
         if (sta == nullptr)
         {
             cur_line_number = pro.getNextLineNumber(cur_line_number);
-            delete sta;
+            sta->~Statement();
             continue;
         }
         if (pro.getSourceLine(cur_line_number)[0] == 'G')
@@ -152,9 +152,7 @@ void RunStatement::execute(EvalState &state, Program &pro) {
             sta->execute(state, pro);
             GotoStatement *newsta = dynamic_cast<GotoStatement *>(sta);
             cur_line_number = newsta->getlinetarget();
-            delete newsta;
             sta->~Statement();
-            delete sta;
             continue;
         }
         if (pro.getSourceLine(cur_line_number)[0] == 'I')
@@ -167,20 +165,17 @@ void RunStatement::execute(EvalState &state, Program &pro) {
             else {
                 cur_line_number = pro.getNextLineNumber(cur_line_number);
             }
-            delete newsta;
             sta->~Statement();
-            delete sta;
             continue;
         }
         if (pro.getSourceLine(cur_line_number)[0] == 'E') {
+            sta->execute(state, pro);
             sta->~Statement();
-            delete sta;
-            return;
+            continue;
         }
         sta->execute(state, pro);
         cur_line_number = pro.getNextLineNumber(cur_line_number);
         sta->~Statement();
-        delete sta;
     }
 }
 
