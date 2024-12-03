@@ -43,7 +43,10 @@ PrintStatement::~PrintStatement() {
 }
 void PrintStatement::execute(EvalState &state, Program &pro) {
     int value = exp->eval(state);
-    std::cout << value << std::endl;
+    if (value != 114514)
+    {
+        std::cout << value << std::endl;
+    }
     return;
 }
 
