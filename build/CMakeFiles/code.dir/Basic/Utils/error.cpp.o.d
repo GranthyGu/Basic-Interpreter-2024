@@ -1,5 +1,5 @@
 CMakeFiles/code.dir/Basic/Utils/error.cpp.o: \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.cpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -757,4 +757,4 @@ CMakeFiles/code.dir/Basic/Utils/error.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/weak_result_type.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/allocator_destructor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.hpp
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.hpp

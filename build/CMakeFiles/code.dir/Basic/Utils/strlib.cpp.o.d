@@ -1,5 +1,5 @@
 CMakeFiles/code.dir/Basic/Utils/strlib.cpp.o: \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/strlib.cpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/strlib.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__assert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__config \
@@ -825,5 +825,5 @@ CMakeFiles/code.dir/Basic/Utils/strlib.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/cstdarg \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.hpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/strlib.hpp
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/strlib.hpp

@@ -1,6 +1,6 @@
 CMakeFiles/code.dir/Basic/evalstate.cpp.o: \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/evalstate.cpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/evalstate.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/evalstate.cpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/evalstate.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \

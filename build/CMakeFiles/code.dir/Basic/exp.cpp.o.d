@@ -1,6 +1,6 @@
 CMakeFiles/code.dir/Basic/exp.cpp.o: \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/exp.cpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/exp.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/exp.cpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/exp.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -758,8 +758,8 @@ CMakeFiles/code.dir/Basic/exp.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/weak_result_type.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/allocator_destructor.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__memory/uses_allocator_construction.h \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.hpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/evalstate.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/evalstate.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/is_transparent.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__iterator/ranges_iterator_traits.h \
@@ -876,7 +876,7 @@ CMakeFiles/code.dir/Basic/exp.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_binary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/strlib.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/strlib.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \

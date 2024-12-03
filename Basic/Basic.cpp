@@ -118,7 +118,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
                 sta->execute(state, program);
                 delete sta;
                 return;
-                return;
             }
             return;
         }
