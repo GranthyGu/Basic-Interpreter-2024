@@ -121,7 +121,10 @@ int CompoundExp::eval(EvalState &state) {
     if (op == "-") return left - right;
     if (op == "*") return left * right;
     if (op == "/") {
-        if (right == 0) error("DIVIDE BY ZERO");
+        if (right == 0) {
+            std::cout << "DIVIDE BY ZERO" << std::endl;
+            return 114514;
+        }
         return left / right;
     }
     return 0;
