@@ -55,6 +55,12 @@ void InputStatement::execute(EvalState &state, Program &pro) {
         scanner.scanNumbers();
         scanner.setInput(input);
         std::string token = scanner.nextToken();
+        bool negative = false;
+        if (token[0] == '-')
+        {
+            token = scanner.nextToken();
+            negative = true;
+        }
         if (scanner.hasMoreTokens() || scanner.getTokenType(token) != NUMBER) {
             std::cout << "INVALID NUMBER" << std::endl;
             continue;
@@ -70,6 +76,10 @@ void InputStatement::execute(EvalState &state, Program &pro) {
             if (flag)
             {
                 value = std::stoi(token);
+                if (negative)
+                {
+                    value = -value;
+                }
                 break;
             }
             else {
@@ -153,7 +163,7 @@ void RunStatement::execute(EvalState &state, Program &pro) {
             cur_line_number = newsta->getlinetarget();
             continue;
         }
-        if (pro.getSourceLine(cur_line_number)[0] == 'I')
+        if (pro.getSourceLine(cur_line_number)[0] == 'I' && pro.getSourceLine(cur_line_number)[1] == 'F')
         {
             sta->execute(state, pro);
             IfStatement *newsta = dynamic_cast<IfStatement *>(sta);
@@ -197,6 +207,7 @@ void QuitStatement::execute(EvalState &state, Program &pro) {
 ClearStatement::ClearStatement() {}
 void ClearStatement::execute(EvalState &state, Program &pro) {
     pro.clear();
+    state.Clear();
 }
 
 HelpStatement::HelpStatement() {}

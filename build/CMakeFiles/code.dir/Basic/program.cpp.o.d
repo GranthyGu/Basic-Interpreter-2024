@@ -1,6 +1,6 @@
 CMakeFiles/code.dir/Basic/program.cpp.o: \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/program.cpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/program.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/program.cpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/program.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/string \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/max.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__algorithm/comp.h \
@@ -875,15 +875,15 @@ CMakeFiles/code.dir/Basic/program.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/pointer_to_unary_function.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/__functional/unary_negate.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/map \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/statement.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/statement.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/sstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/bitset \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/evalstate.hpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/exp.hpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.hpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/strlib.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/evalstate.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/exp.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/strlib.hpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk/usr/include/c++/v1/iostream \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/tokenScanner.hpp \
-  /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/parser.hpp
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/tokenScanner.hpp \
+  /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/parser.hpp
