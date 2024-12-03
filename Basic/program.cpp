@@ -22,10 +22,6 @@ void Program::clear() {
 }
 
 void Program::addSourceLine(int lineNumber, const std::string &line) {
-    for (auto i : program)
-    {
-        std::cout << i.first << std::endl;
-    }
     TokenScanner scanner;
     scanner.ignoreComments();
     scanner.scanNumbers();
