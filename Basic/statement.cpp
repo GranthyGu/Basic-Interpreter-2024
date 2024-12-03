@@ -209,6 +209,7 @@ void QuitStatement::execute(EvalState &state, Program &pro) {
 ClearStatement::ClearStatement() {}
 void ClearStatement::execute(EvalState &state, Program &pro) {
     pro.~Program();
+    state.~EvalState();
     pro.clear();
     state.Clear();
 }

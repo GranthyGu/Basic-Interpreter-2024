@@ -14,7 +14,12 @@
 
 Program::Program() = default;
 
-Program::~Program() = default;
+Program::~Program() {
+    for (auto i : program)
+    {
+        delete i.second.first;
+    }
+}
 
 void Program::clear() {
     program.clear();
