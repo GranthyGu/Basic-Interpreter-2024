@@ -43,6 +43,7 @@ PrintStatement::~PrintStatement() {
 }
 void PrintStatement::execute(EvalState &state, Program &pro) {
     int value = exp->eval(state);
+    delete exp;
     std::cout << value << std::endl;
     return;
 }
