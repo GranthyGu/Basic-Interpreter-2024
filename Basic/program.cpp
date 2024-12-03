@@ -35,9 +35,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
     if (scanner.hasMoreTokens()) {
         std::string token = scanner.nextToken();
         if (token == "REM") {
-            Statement *sta = new REMStatement();
-            delete program[lineNumber].first;
-            program[lineNumber] = {sta, line};
+            program[lineNumber] = {nullptr, line};
             return;
         }
         if (token == "LET") {
