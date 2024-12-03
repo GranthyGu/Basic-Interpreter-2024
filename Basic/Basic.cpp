@@ -72,7 +72,8 @@ void processLine(std::string line, Program &program, EvalState &state) {
         if (tmp == "LET")
         {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             } else {
                 std::string variable = scanner.nextToken();
                 if (scanner.nextToken()[0] == '=') {
@@ -91,10 +92,12 @@ void processLine(std::string line, Program &program, EvalState &state) {
                         delete sta;
                         return;
                     } else {
-                        error("SYNTAX ERROR");
+                        std::cout << "SYNTAX ERROR" << std::endl;
+                        return;
                     }
                 } else {
-                    error("SYNTAX ERROR");
+                    std::cout << "SYNTAX ERROR" << std::endl;
+                    return;
                 }
             }
             return;
@@ -102,7 +105,8 @@ void processLine(std::string line, Program &program, EvalState &state) {
         if (tmp == "PRINT")
         {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             else {
                 std::string ex;
@@ -117,7 +121,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
                 Statement *sta = new PrintStatement(exp);
                 sta->execute(state, program);
                 delete sta;
-                delete exp;
                 return;
             }
             return;
@@ -125,12 +128,14 @@ void processLine(std::string line, Program &program, EvalState &state) {
         if (tmp == "INPUT")
         {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             else {
                 std::string variable = scanner.nextToken();
                 if (scanner.hasMoreTokens()) {
-                    error("SYNTAX ERROR");
+                    std::cout << "SYNTAX ERROR" << std::endl;
+                    return;
                 }
                 Statement *sta = new InputStatement(variable);
                 sta->execute(state, program);
@@ -188,7 +193,8 @@ void processLine(std::string line, Program &program, EvalState &state) {
             delete sta;
             return;
         }
-        error("SYNTAX ERROR");
+        std::cout << "SYNTAX ERROR" << std::endl;
+        return;
     }
 }
 

@@ -42,7 +42,8 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         }
         if (token == "LET") {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             } else {
                 std::string variable = scanner.nextToken();
                 if (scanner.nextToken()[0] == '=') {
@@ -60,7 +61,8 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                         delete program[lineNumber].first;
                         program[lineNumber] = {sta, line};
                     } else {
-                        error("SYNTAX ERROR");
+                        std::cout << "SYNTAX ERROR" << std::endl;
+                        return;
                     }
                 }
             }
@@ -68,12 +70,14 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         }
         if (token == "GOTO") {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             int value;
             std::string input = scanner.nextToken();
             if (scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             try {
                 value = std::stoi(input);
@@ -82,13 +86,15 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                 program[lineNumber] = {sta, line};
             } 
             catch(std::exception& e) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             return;
         }
         if (token == "IF") {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             } else {
                 std::string left;
                 std::string right;
@@ -124,10 +130,12 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                     target = std::stoi(ttmp);
                 } 
                 catch(std::exception& e) {
-                    error("INVALID NUMBER");
+                    std::cout << "SYNTAX ERROR" << std::endl;
+                    return;
                 }
                 if (scanner.hasMoreTokens()) {
-                    error("SYNTAX ERROR");
+                    std::cout << "SYNTAX ERROR" << std::endl;
+                    return;
                 }
                 Statement *sta = new IfStatement(lhs, rhs, op, target);
                 delete program[lineNumber].first;
@@ -137,7 +145,8 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         }
         if (token == "PRINT") {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             else {
                 std::string ex;
@@ -157,12 +166,14 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         }
         if (token == "INPUT") {
             if (!scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             else {
                 std::string variable = scanner.nextToken();
                 if (scanner.hasMoreTokens()) {
-                    error("SYNTAX ERROR");
+                    std::cout << "SYNTAX ERROR" << std::endl;
+                    return;
                 }
                 Statement *sta = new InputStatement(variable);
                 delete program[lineNumber].first;
@@ -172,17 +183,21 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         }
         if (token == "END") {
             if (scanner.hasMoreTokens()) {
-                error("SYNTAX ERROR");
+                std::cout << "SYNTAX ERROR" << std::endl;
+                return;
             }
             Statement *sta = new EndStatement();
             delete program[lineNumber].first;
             program[lineNumber] = {sta, line};
             return;
         }
-        error("SYNTAX ERROR");
+        std::cout << "SYNTAX ERROR" << std::endl;
+        return;
     }
     else {
         if (program.find(lineNumber) == program.end()) {
+            std::cout << "SYNTAX ERROR" << std::endl;
+            return;
             return;
         } else {
             delete program[lineNumber].first;

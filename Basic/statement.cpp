@@ -38,7 +38,9 @@ void LetStatement::execute(EvalState &state, Program &pro) {
 }
 
 PrintStatement::PrintStatement(Expression *exp) : exp(exp) {}
-PrintStatement::~PrintStatement() {}
+PrintStatement::~PrintStatement() {
+    delete exp;
+}
 void PrintStatement::execute(EvalState &state, Program &pro) {
     int value = exp->eval(state);
     std::cout << value << std::endl;
@@ -101,7 +103,8 @@ GotoStatement::GotoStatement(int line) : linetarget(line) {}
 void GotoStatement::execute(EvalState &state, Program &pro) {
     if (pro.getSourceLine(linetarget).empty())
     {
-        error("LINE NUMBER ERROR");
+        std::cout << "LINE NUMBER ERROR" << std::endl;
+        return;
     }
 }
 int GotoStatement::getlinetarget() {
@@ -116,7 +119,8 @@ IfStatement::~IfStatement() {
 void IfStatement::execute(EvalState &state, Program &pro) {
     if (pro.getSourceLine(target).empty())
     {
-        error("LINE NUMBER ERROR");
+        std::cout << "LINE NUMBER ERROR" << std::endl;
+        return;
     }
     return;
 }
