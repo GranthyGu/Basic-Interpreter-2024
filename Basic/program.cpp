@@ -196,8 +196,6 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
     }
     else {
         if (program.find(lineNumber) == program.end()) {
-            std::cout << "SYNTAX ERROR" << std::endl;
-            return;
             return;
         } else {
             delete program[lineNumber].first;
