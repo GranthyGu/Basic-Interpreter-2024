@@ -1,56 +1,56 @@
 [
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Basic.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Basic.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Basic.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Basic.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Basic.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Basic.cpp",
   "output": "CMakeFiles/code.dir/Basic/Basic.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/evalstate.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/evalstate.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/evalstate.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/evalstate.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/evalstate.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/evalstate.cpp",
   "output": "CMakeFiles/code.dir/Basic/evalstate.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/exp.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/exp.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/exp.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/exp.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/exp.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/exp.cpp",
   "output": "CMakeFiles/code.dir/Basic/exp.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/parser.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/parser.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/parser.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/parser.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/parser.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/parser.cpp",
   "output": "CMakeFiles/code.dir/Basic/parser.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/program.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/program.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/program.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/program.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/program.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/program.cpp",
   "output": "CMakeFiles/code.dir/Basic/program.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/statement.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/statement.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/statement.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/statement.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/statement.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/statement.cpp",
   "output": "CMakeFiles/code.dir/Basic/statement.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Utils/error.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/error.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Utils/error.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/error.cpp",
   "output": "CMakeFiles/code.dir/Basic/Utils/error.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Utils/tokenScanner.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/tokenScanner.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/tokenScanner.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Utils/tokenScanner.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/tokenScanner.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/tokenScanner.cpp",
   "output": "CMakeFiles/code.dir/Basic/Utils/tokenScanner.cpp.o"
 },
 {
-  "directory": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Utils/strlib.cpp.o -c /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/strlib.cpp",
-  "file": "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/Basic/Utils/strlib.cpp",
+  "directory": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++   -g -std=gnu++17 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.4.sdk -o CMakeFiles/code.dir/Basic/Utils/strlib.cpp.o -c /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/strlib.cpp",
+  "file": "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/Basic/Utils/strlib.cpp",
   "output": "CMakeFiles/code.dir/Basic/Utils/strlib.cpp.o"
 }
 ]

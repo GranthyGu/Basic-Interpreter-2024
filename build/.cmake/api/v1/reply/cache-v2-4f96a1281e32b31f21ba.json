@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build"
+			"value" : "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main"
+			"value" : "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1143,7 +1143,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build"
+			"value" : "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build"
 		},
 		{
 			"name" : "code_IS_TOP_LEVEL",
@@ -1167,7 +1167,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main"
+			"value" : "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024"
 		}
 	],
 	"kind" : "cache",

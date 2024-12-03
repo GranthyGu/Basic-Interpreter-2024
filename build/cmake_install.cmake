@@ -1,4 +1,4 @@
-# Install script for directory: /Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main
+# Install script for directory: /Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -52,6 +52,6 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-  file(WRITE "/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build/${CMAKE_INSTALL_MANIFEST}"
+  file(WRITE "/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

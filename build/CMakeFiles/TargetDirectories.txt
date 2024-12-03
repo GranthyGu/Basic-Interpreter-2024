@@ -1,3 +1,3 @@
-/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build/CMakeFiles/code.dir
-/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build/CMakeFiles/edit_cache.dir
-/Users/guyuanxi/Desktop/C++/Basic-Interpreter-2024-main/build/CMakeFiles/rebuild_cache.dir
+/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build/CMakeFiles/code.dir
+/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build/CMakeFiles/edit_cache.dir
+/Users/guyuanxi/Desktop/C++/666/Basic-Interpreter-2024/build/CMakeFiles/rebuild_cache.dir
