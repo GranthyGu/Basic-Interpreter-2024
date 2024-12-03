@@ -42,14 +42,9 @@ PrintStatement::~PrintStatement() {
     delete exp;
 }
 void PrintStatement::execute(EvalState &state, Program &pro) {
-    try {
-        int value = exp->eval(state);
-        std::cout << value << std::endl;
-    }
-    catch(std::exception& e) {
-        delete exp;
-        throw;
-    }
+    int value = exp->eval(state);
+    delete exp;
+    std::cout << value << std::endl;
     return;
 }
 
@@ -209,8 +204,6 @@ void ListStatement::execute(EvalState &state, Program &pro) {
 
 QuitStatement::QuitStatement() {}
 void QuitStatement::execute(EvalState &state, Program &pro) {
-    pro.~Program();
-    state.~EvalState();
     exit(0);
 }
 
