@@ -117,7 +117,7 @@ void processLine(std::string line, Program &program, EvalState &state) {
                 Statement *sta = new PrintStatement(exp);
                 sta->execute(state, program);
                 delete sta;
-                delete exp;
+                exp->~Expression();
                 return;
             }
             return;
