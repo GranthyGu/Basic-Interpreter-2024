@@ -114,14 +114,9 @@ void processLine(std::string line, Program &program, EvalState &state) {
                 expp.scanNumbers();
                 expp.setInput(ex);
                 Expression *exp = parseExp(expp);
-                try {
-                    int value = exp->eval(state);
-                    std::cout << value << std::endl;
-                }
-                catch(std::exception& e) {
-                    delete exp;
-                    throw;
-                }
+                Statement *sta = new PrintStatement(exp);
+                sta->execute(state, program);
+                delete sta;
                 return;
             }
             return;
