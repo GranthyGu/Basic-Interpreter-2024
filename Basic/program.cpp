@@ -103,7 +103,6 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                 expp.scanNumbers();
                 expp.setInput(left);
                 Expression *lhs = parseExp(expp);
-                op = scanner.nextToken()[0];
                 while (true) {
                     std::string tmp = scanner.nextToken();
                     if (tmp == "THEN") {
