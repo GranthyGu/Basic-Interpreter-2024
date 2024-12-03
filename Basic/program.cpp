@@ -31,6 +31,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         std::string token = scanner.nextToken();
         if (token == "REM") {
             Statement *sta = new REMStatement();
+            delete program[lineNumber].first;
             program[lineNumber] = {sta, line};
             return;
         }
@@ -51,6 +52,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                         expp.setInput(ex);
                         Expression *exp = parseExp(expp);
                         Statement *sta = new LetStatement(variable, exp);
+                        delete program[lineNumber].first;
                         program[lineNumber] = {sta, line};
                     } else {
                         error("SYNTAX ERROR");
@@ -71,6 +73,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
             try {
                 value = std::stoi(input);
                 Statement *sta = new GotoStatement(value);
+                delete program[lineNumber].first;
                 program[lineNumber] = {sta, line};
             } 
             catch(std::exception& e) {
@@ -122,6 +125,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                     error("SYNTAX ERROR");
                 }
                 Statement *sta = new IfStatement(lhs, rhs, op, target);
+                delete program[lineNumber].first;
                 program[lineNumber] = {sta, line};
             }
             return;
@@ -141,6 +145,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                 expp.setInput(ex);
                 Expression *exp = parseExp(expp);
                 Statement *sta = new PrintStatement(exp);
+                delete program[lineNumber].first;
                 program[lineNumber] = {sta, line};
             }
             return;
@@ -155,6 +160,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                     error("SYNTAX ERROR");
                 }
                 Statement *sta = new InputStatement(variable);
+                delete program[lineNumber].first;
                 program[lineNumber] = {sta, line};
             }
             return;
@@ -164,6 +170,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
                 error("SYNTAX ERROR");
             }
             Statement *sta = new EndStatement();
+            delete program[lineNumber].first;
             program[lineNumber] = {sta, line};
             return;
         }
@@ -173,6 +180,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         if (program.find(lineNumber) == program.end()) {
             return;
         } else {
+            delete program[lineNumber].first;
             program.erase(lineNumber);
             return;
         }
