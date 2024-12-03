@@ -38,12 +38,11 @@ void LetStatement::execute(EvalState &state, Program &pro) {
 }
 
 PrintStatement::PrintStatement(Expression *exp) : exp(exp) {}
-PrintStatement::~PrintStatement() {
-    delete exp;
-}
+PrintStatement::~PrintStatement() {}
 void PrintStatement::execute(EvalState &state, Program &pro) {
     int value = exp->eval(state);
     std::cout << value << std::endl;
+    delete exp;
     return;
 }
 
@@ -208,6 +207,7 @@ void QuitStatement::execute(EvalState &state, Program &pro) {
 
 ClearStatement::ClearStatement() {}
 void ClearStatement::execute(EvalState &state, Program &pro) {
+    pro.~Program();
     pro.clear();
     state.Clear();
 }
