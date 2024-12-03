@@ -88,7 +88,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
                         Expression *exp = parseExp(expp);
                         Statement *sta = new LetStatement(variable, exp);
                         sta->execute(state, program);
-                        sta->~Statement();
                         delete sta;
                         return;
                     } else {
@@ -117,7 +116,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
                 Expression *exp = parseExp(expp);
                 Statement *sta = new PrintStatement(exp);
                 sta->execute(state, program);
-                sta->~Statement();
                 delete sta;
                 return;
             }
@@ -135,7 +133,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
                 }
                 Statement *sta = new InputStatement(variable);
                 sta->execute(state, program);
-                sta->~Statement();
                 delete sta;
                 return;
             }
@@ -145,7 +142,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new EndStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
@@ -153,7 +149,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new REMStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
@@ -161,7 +156,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new RunStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
@@ -169,7 +163,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new ListStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
@@ -177,7 +170,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new ClearStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
@@ -185,7 +177,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new QuitStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
@@ -193,7 +184,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         {
             Statement *sta = new HelpStatement();
             sta->execute(state, program);
-            sta->~Statement();
             delete sta;
             return;
         }
