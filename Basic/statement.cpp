@@ -203,6 +203,8 @@ void ListStatement::execute(EvalState &state, Program &pro) {
 
 QuitStatement::QuitStatement() {}
 void QuitStatement::execute(EvalState &state, Program &pro) {
+    pro.~Program();
+    state.~EvalState();
     exit(0);
 }
 
