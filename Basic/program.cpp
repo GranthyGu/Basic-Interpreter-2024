@@ -196,7 +196,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
         if (program.find(lineNumber) == program.end()) {
             return;
         } else {
-            delete program[lineNumber].first;
+            //delete program[lineNumber].first;
             program.erase(lineNumber);
             return;
         }
