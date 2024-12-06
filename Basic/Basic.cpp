@@ -58,19 +58,16 @@ void processLine(std::string line, Program &program, EvalState &state) {
     scanner.scanNumbers();
     scanner.setInput(line);
     std::string tmp = scanner.nextToken();
-    if (scanner.getTokenType(tmp) == NUMBER)
-    {
+    if (scanner.getTokenType(tmp) == NUMBER) {
         int linenumber = std::stoi(tmp); ///Have some risk!!
         std::string line;
-        while (scanner.hasMoreTokens())
-        {
+        while (scanner.hasMoreTokens()) {
             line += scanner.nextToken() + ' ';
         }
         program.addSourceLine(linenumber, line);
         return;
     } else {
-        if (tmp == "LET")
-        {
+        if (tmp == "LET") {
             if (!scanner.hasMoreTokens()) {
                 std::cout << "SYNTAX ERROR" << std::endl;
                 return;
@@ -107,8 +104,7 @@ void processLine(std::string line, Program &program, EvalState &state) {
             if (!scanner.hasMoreTokens()) {
                 std::cout << "SYNTAX ERROR" << std::endl;
                 return;
-            }
-            else {
+            } else {
                 std::string ex;
                 while (scanner.hasMoreTokens()) {
                     ex += scanner.nextToken() + ' ';
@@ -130,8 +126,7 @@ void processLine(std::string line, Program &program, EvalState &state) {
             if (!scanner.hasMoreTokens()) {
                 std::cout << "SYNTAX ERROR" << std::endl;
                 return;
-            }
-            else {
+            } else {
                 std::string variable = scanner.nextToken();
                 if (scanner.hasMoreTokens()) {
                     std::cout << "SYNTAX ERROR" << std::endl;
@@ -144,50 +139,43 @@ void processLine(std::string line, Program &program, EvalState &state) {
             }
             return;
         }
-        if (tmp == "END")
-        {
+        if (tmp == "END") {
             Statement *sta = new EndStatement();
             sta->execute(state, program);
             delete sta;
             return;
         }
-        if (tmp == "REM")
-        {
+        if (tmp == "REM") {
             Statement *sta = new REMStatement();
             sta->execute(state, program);
             delete sta;
             return;
         }
-        if (tmp == "RUN")
-        {
+        if (tmp == "RUN") {
             Statement *sta = new RunStatement();
             sta->execute(state, program);
             delete sta;
             return;
         }
-        if (tmp == "LIST")
-        {
+        if (tmp == "LIST") {
             Statement *sta = new ListStatement();
             sta->execute(state, program);
             delete sta;
             return;
         }
-        if (tmp == "CLEAR")
-        {
+        if (tmp == "CLEAR") {
             Statement *sta = new ClearStatement();
             sta->execute(state, program);
             delete sta;
             return;
         }
-        if (tmp == "QUIT")
-        {
+        if (tmp == "QUIT") {
             Statement *sta = new QuitStatement();
             sta->execute(state, program);
             delete sta;
             return;
         }
-        if (tmp == "HELP")
-        {
+        if (tmp == "HELP") {
             Statement *sta = new HelpStatement();
             sta->execute(state, program);
             delete sta;

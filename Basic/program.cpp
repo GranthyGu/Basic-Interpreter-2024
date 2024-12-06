@@ -15,8 +15,7 @@
 Program::Program() = default;
 
 Program::~Program() {
-    for (auto i : program)
-    {
+    for (auto i : program) {
         delete i.second.first;
     }
 }
@@ -147,8 +146,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
             if (!scanner.hasMoreTokens()) {
                 std::cout << "SYNTAX ERROR" << std::endl;
                 return;
-            }
-            else {
+            } else {
                 std::string ex;
                 while (scanner.hasMoreTokens()) {
                     ex += scanner.nextToken() + ' ';
@@ -168,8 +166,7 @@ void Program::addSourceLine(int lineNumber, const std::string &line) {
             if (!scanner.hasMoreTokens()) {
                 std::cout << "SYNTAX ERROR" << std::endl;
                 return;
-            }
-            else {
+            } else {
                 std::string variable = scanner.nextToken();
                 if (scanner.hasMoreTokens()) {
                     std::cout << "SYNTAX ERROR" << std::endl;

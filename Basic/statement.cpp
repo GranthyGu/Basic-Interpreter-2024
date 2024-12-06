@@ -27,8 +27,7 @@ LetStatement::~LetStatement() {
     delete exp;
 }
 void LetStatement::execute(EvalState &state, Program &pro) {
-    if (var == "LET")
-    {
+    if (var == "LET") {
         std::cout << "SYNTAX ERROR" << std::endl;
         return;
     }
@@ -43,8 +42,7 @@ PrintStatement::~PrintStatement() {
 }
 void PrintStatement::execute(EvalState &state, Program &pro) {
     int value = exp->eval(state);
-    if (value != 114514)
-    {
+    if (value != 114514) {
         std::cout << value << std::endl;
     }
     return;
@@ -53,8 +51,7 @@ void PrintStatement::execute(EvalState &state, Program &pro) {
 InputStatement::InputStatement(std::string str) : variable(str) {}
 void InputStatement::execute(EvalState &state, Program &pro) {
     int value;
-    while (true)
-    {
+    while (true) {
         std::cout << " ? ";
         std::string input;
         getline(std::cin, input);
@@ -64,8 +61,7 @@ void InputStatement::execute(EvalState &state, Program &pro) {
         scanner.setInput(input);
         std::string token = scanner.nextToken();
         bool negative = false;
-        if (token[0] == '-')
-        {
+        if (token[0] == '-') {
             token = scanner.nextToken();
             negative = true;
         }
@@ -74,23 +70,18 @@ void InputStatement::execute(EvalState &state, Program &pro) {
             continue;
         } else {
             bool flag = true;
-            for (int i = 0; i < token.length(); i++)
-            {
-                if (token[i] == '.')
-                {
+            for (int i = 0; i < token.length(); i++) {
+                if (token[i] == '.') {
                     flag = false;
                 }
             }
-            if (flag)
-            {
+            if (flag) {
                 value = std::stoi(token);
-                if (negative)
-                {
+                if (negative) {
                     value = -value;
                 }
                 break;
-            }
-            else {
+            } else {
                 std::cout << "INVALID NUMBER" << std::endl;
                 continue;
             }
@@ -104,8 +95,7 @@ void EndStatement::execute(EvalState &state, Program &pro) {}
 
 GotoStatement::GotoStatement(int line) : linetarget(line) {}
 void GotoStatement::execute(EvalState &state, Program &pro) {
-    if (pro.getSourceLine(linetarget).empty())
-    {
+    if (pro.getSourceLine(linetarget).empty()) {
         std::cout << "LINE NUMBER ERROR" << std::endl;
         return;
     }
@@ -120,8 +110,7 @@ IfStatement::~IfStatement() {
     delete rhs;
 }
 void IfStatement::execute(EvalState &state, Program &pro) {
-    if (pro.getSourceLine(target).empty())
-    {
+    if (pro.getSourceLine(target).empty()) {
         std::cout << "LINE NUMBER ERROR" << std::endl;
         return;
     }
@@ -131,16 +120,13 @@ bool IfStatement::condition(EvalState &state, Program &pro) {
     bool flag = false;
     int left = lhs->eval(state);
     int right = rhs->eval(state);
-    if (op == '=')
-    {
+    if (op == '=') {
         flag = (left == right);
     }
-    if (op == '<')
-    {
+    if (op == '<') {
         flag = (left < right);
     }
-    if (op == '>')
-    {
+    if (op == '>') {
         flag = (left > right);
     }
     return flag;
@@ -152,33 +138,27 @@ int IfStatement::get_target_line() {
 RunStatement::RunStatement() {}
 void RunStatement::execute(EvalState &state, Program &pro) {
     int cur_line_number = pro.getFirstLineNumber();
-    if (cur_line_number == -1)
-    {
+    if (cur_line_number == -1) {
         return;
     }
-    while (cur_line_number != -1)
-    {
+    while (cur_line_number != -1) {
         Statement *sta = pro.getParsedStatement(cur_line_number);
-        if (sta == nullptr)
-        {
+        if (sta == nullptr) {
             cur_line_number = pro.getNextLineNumber(cur_line_number);
             continue;
         }
-        if (pro.getSourceLine(cur_line_number)[0] == 'G')
-        {
+        if (pro.getSourceLine(cur_line_number)[0] == 'G') {
             sta->execute(state, pro);
             GotoStatement *newsta = dynamic_cast<GotoStatement *>(sta);
             cur_line_number = newsta->getlinetarget();
             continue;
         }
-        if (pro.getSourceLine(cur_line_number)[0] == 'I' && pro.getSourceLine(cur_line_number)[1] == 'F')
-        {
+        if (pro.getSourceLine(cur_line_number)[0] == 'I' && pro.getSourceLine(cur_line_number)[1] == 'F') {
             sta->execute(state, pro);
             IfStatement *newsta = dynamic_cast<IfStatement *>(sta);
             if (newsta->condition(state, pro)) {
                 cur_line_number = newsta->get_target_line();
-            }
-            else {
+            } else {
                 cur_line_number = pro.getNextLineNumber(cur_line_number);
             }
             continue;
@@ -194,12 +174,10 @@ void RunStatement::execute(EvalState &state, Program &pro) {
 ListStatement::ListStatement() {}
 void ListStatement::execute(EvalState &state, Program &pro) {
     int cur_line_number = pro.getFirstLineNumber();
-    if (cur_line_number == -1)
-    {
+    if (cur_line_number == -1) {
         return;
     }
-    while (cur_line_number != -1)
-    {
+    while (cur_line_number != -1) {
         std::cout << cur_line_number << ' ';
         std::cout << pro.getSourceLine(cur_line_number) << std::endl;
         cur_line_number = pro.getNextLineNumber(cur_line_number);
